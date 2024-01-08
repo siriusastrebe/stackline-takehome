@@ -1,5 +1,7 @@
+import "./RetailTable.css";
+ 
 function RetailTable() {
-  return (<div>
+  return (<div className="retail-table">
     Hello RetailTable!
   </div>)
 }

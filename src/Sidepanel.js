@@ -1,5 +1,7 @@
+import "./Sidepanel.css";
+
 function Sidepanel() {
-  return (<div>
+  return (<div className="sidepanel">
     Hello Sidepanel!
   </div>)
 }

@@ -1,5 +1,7 @@
+import "./Linechart.css";
+
 function Linechart() {
-  return (<div>
+  return (<div className="linechart">
     Hello linechart!
   </div>)
 }
