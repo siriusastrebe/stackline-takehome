@@ -1,3 +1,45 @@
 .sidepanel {
   background-color: var(--foreground-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.product-image {
+  max-width: 200px;
+}
+
+.product-title {
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 8px;
+}
+
+.product-subtitle {
+  font-size: 82%;
+  color: var(--light-text-color);
+  max-width: 220px;
+  margin-bottom: 12px;
+}
+
+.product-tags {
+  max-width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tag {
+  color: var(--medium-text-color);
+  margin: 2px;
+  padding: 2px 7px 2px 7px;
+  font-weight: light;
+  font-size: 74%;
+  display: inline-flex;
+  justify-content: center;
+  border: 1px solid var(--thin-border-color);
+  border-radius: 3px;
+  text-overflow: ellipsis;
 }

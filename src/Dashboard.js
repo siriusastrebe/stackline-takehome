@@ -13,14 +13,18 @@ function Dashboard() {
     })
   }, []);
 
-  console.log('state', setState);
+  console.log('state', state);
 
-  return (<div className="dashboard">
-    <Sidepanel></Sidepanel>
-    <div className="infographics">
-      <Linechart></Linechart>
-      <RetailTable></RetailTable>
-    </div>
-  </div>)
+  if (state && state[0]) {
+    return (<div className="dashboard">
+      <Sidepanel product={state[0]}></Sidepanel>
+      <div className="infographics">
+        <Linechart></Linechart>
+        <RetailTable></RetailTable>
+      </div>
+    </div>)
+  } else {
+    <div className="loading">Loading...</div>
+  }
 }
 export default Dashboard;

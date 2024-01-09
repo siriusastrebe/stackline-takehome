@@ -1,8 +1,10 @@
 import DashboardState from './reducers';
 
 export async function fetchDashboardState() {
-  // Stubbed out, using local JSON data while backend is being developed
+  // Stubbed out
   // const response = await fetch('/api/dashboard');
+
+  // using local JSON data while backend is being developed
   const response = await fetch(process.env.PUBLIC_URL + '/data.json');
 
   console.log('a', response);
