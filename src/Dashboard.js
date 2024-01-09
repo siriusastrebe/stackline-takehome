@@ -24,7 +24,7 @@ function Dashboard() {
     } else {
       return [];
     }
-  }, [state])
+  }, [state]);
 
   const chartConfiguration = React.useMemo(() => {
 
@@ -34,7 +34,7 @@ function Dashboard() {
     return (<div className="dashboard">
       <Sidepanel product={state[0]}></Sidepanel>
       <div className="infographics">
-        <Linechart product={state[0]}></Linechart>
+        <Linechart product={state[0]} lineData={lineData}></Linechart>
         <RetailTable product={state[0]}></RetailTable>
       </div>
     </div>)
