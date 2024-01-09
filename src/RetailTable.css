@@ -1,3 +1,24 @@
 .retail-table {
   background-color: var(--foreground-color);
 }
+
+.retail-table th {
+  font-weight: light;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: var(--medium-text-color);
+  padding: 10px;
+  cursor: pointer;
+}
+.retail-table td {
+  font-size: 90%;
+  color: var(--light-text-color);
+  border-bottom: 1px solid var(--thinner-border-color);
+  padding: 10px;
+}
+.sortArrow {
+  color: var(--light-text-color);
+}
+.sortArrow.active {
+  color: var(--active-color);
+}

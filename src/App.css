@@ -2,9 +2,11 @@
   --primary-color: #052849;
   --background-color: #f6f8fa;
   --foreground-color: white;
-  --light-text-color: #888;
+  --light-text-color: #999;
   --medium-text-color: #555;
   --thin-border-color: #ccc;
+  --thinner-border-color: #eee;
+  --active-color: limegreen;
 }
 
 .App {

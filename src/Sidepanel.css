@@ -18,6 +18,7 @@
 }
 
 .product-subtitle {
+  text-align: center;
   font-size: 82%;
   color: var(--light-text-color);
   max-width: 220px;

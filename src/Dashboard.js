@@ -13,14 +13,29 @@ function Dashboard() {
     })
   }, []);
 
-  console.log('state', state);
+  const lineData = React.useMemo(() => {
+    if (state) {
+      return state[0].sales.map(sale => {
+        return {
+          x: new Date(sale.weekEnding),
+          y: [sale.retailSales, sale.wholesaleSales],
+        }
+      });
+    } else {
+      return [];
+    }
+  }, [state])
+
+  const chartConfiguration = React.useMemo(() => {
+
+  }, [state]);
 
   if (state && state[0]) {
     return (<div className="dashboard">
       <Sidepanel product={state[0]}></Sidepanel>
       <div className="infographics">
-        <Linechart></Linechart>
-        <RetailTable></RetailTable>
+        <Linechart product={state[0]}></Linechart>
+        <RetailTable product={state[0]}></RetailTable>
       </div>
     </div>)
   } else {

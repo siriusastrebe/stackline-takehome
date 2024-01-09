@@ -1,6 +1,6 @@
 import "./Linechart.css";
 
-function Linechart() {
+function Linechart(props) {
   return (<div className="linechart">
     Hello linechart!
   </div>)
