@@ -1,3 +1,11 @@
 .linechart {
   background-color: var(--foreground-color);
+  width: 100%;
+}
+
+.chart-title {
+  font-size: 1.2em;
+  color: var(--medium-text-color);
+  padding: 14px;
+  margin-left: 10px;
 }

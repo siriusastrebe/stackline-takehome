@@ -31,7 +31,7 @@ function Dashboard() {
     return {
       count: 2,
       labels: ['Retail Sales', 'Wholesale Sales'],
-      colors: ['#5f0f40', '#9a031e'],
+      colors: ['#44a7f6', '#9aa5be'],
       xDomain: d3.extent(lineData.map((d) => d.x)),
       yDomain: d3.extent(lineData.map(d => Math.max(...d.y))),
     }

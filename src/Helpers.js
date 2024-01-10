@@ -9,5 +9,5 @@ export function getStartOfNextMonth(date) {
 }
 export function monthAbbreviation(date) {
   const monthName = date.toLocaleString('default', { month: 'long' });
-  return monthName.substring(0, 3);
+  return monthName.substring(0, 3).toUpperCase();
 }
