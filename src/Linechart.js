@@ -31,7 +31,7 @@ function LineChartSVG(props) {
       m.push(current);
     }
     return m;
-  }, [chartConfiguration.xDomain[0], chartConfiguration.xDomain[1]])
+  }, [chartConfiguration.xDomain])
 
   return (
     <svg style={{width: '100%', height: 400}} id="linechart">
@@ -67,7 +67,7 @@ function Linechart(props) {
     window.addEventListener('resize', updateSize);
     updateSize();
     return () => window.removeEventListener('resize', updateSize);
-  }, [ref.current]);
+  }, [ref]);
 
   return (<div className="linechart" ref={ref}>
     <div className="chart-title">Retail Sales</div>

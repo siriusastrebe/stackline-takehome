@@ -35,7 +35,7 @@ function Dashboard() {
       xDomain: d3.extent(lineData.map((d) => d.x)),
       yDomain: d3.extent(lineData.map(d => Math.max(...d.y))),
     }
-  }, [state]);
+  }, [lineData]);
 
   if (state && state[0]) {
     return (<div className="dashboard">

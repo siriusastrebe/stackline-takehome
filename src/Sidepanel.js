@@ -4,7 +4,7 @@ function Sidepanel(props) {
   const product = props.product;
   return (<div className="sidepanel">
     <div>
-      <img src={product.image} className="product-image"></img>
+      <img src={product.image} className="product-image" alt={product.title}></img>
     </div>
     <div className="product-title">
       {product.title}
