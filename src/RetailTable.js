@@ -49,7 +49,7 @@ function RetailTable(props) {
           </th>
         </tr>
         {sortedSales.map(sale => (
-          <tr>
+          <tr key={`table-sales-${sale.weekEnding}`}>
             <td>{sale.weekEnding}</td>
             <td>{currencyFormat(sale.retailSales)}</td>
             <td>{currencyFormat(sale.wholesaleSales)}</td>

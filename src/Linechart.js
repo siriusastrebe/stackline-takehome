@@ -45,7 +45,7 @@ function LineChartSVG(props) {
         />)}
         {months.map((month, i) => {
           return (
-            <text x={xScale(month)} y={height + margin.bottom/2} textAnchor="middle" opacity={.4} fontSize={'smaller'}>{monthAbbreviation(month)}</text>
+            <text key={`month-text-${month.toISOString()}`} x={xScale(month)} y={height + margin.bottom/2} textAnchor="middle" opacity={.4} fontSize={'smaller'}>{monthAbbreviation(month)}</text>
           )
         })}
       </g>

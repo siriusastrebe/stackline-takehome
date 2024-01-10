@@ -1,6 +1,7 @@
 .linechart {
   background-color: var(--foreground-color);
   width: 100%;
+  border-bottom: var(--thinner-border-color);
 }
 
 .chart-title {

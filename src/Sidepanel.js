@@ -13,7 +13,7 @@ function Sidepanel(props) {
       {product.subtitle}
     </div>
     <div className="product-tags">
-      {product.tags.map(tag => <div className="tag">{tag}</div>)}
+      {product.tags.map(tag => <div key={`product-tag-${tag}`} className="tag">{tag}</div>)}
     </div>
   </div>)
 }
