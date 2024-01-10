@@ -4,6 +4,7 @@ import RetailTable from "./RetailTable";
 import Sidepanel from "./Sidepanel";
 import "./Dashboard.css";
 import { fetchDashboardState } from "./Models";
+import * as d3 from "d3";
 
 function Dashboard() {
   const [state, setState] = React.useState();
@@ -27,14 +28,20 @@ function Dashboard() {
   }, [state]);
 
   const chartConfiguration = React.useMemo(() => {
-
+    return {
+      count: 2,
+      labels: ['Retail Sales', 'Wholesale Sales'],
+      colors: ['#5f0f40', '#9a031e'],
+      xDomain: d3.extent(lineData.map((d) => d.x)),
+      yDomain: d3.extent(lineData.map(d => Math.max(...d.y))),
+    }
   }, [state]);
 
   if (state && state[0]) {
     return (<div className="dashboard">
       <Sidepanel product={state[0]}></Sidepanel>
       <div className="infographics">
-        <Linechart product={state[0]} lineData={lineData}></Linechart>
+        <Linechart product={state[0]} lineData={lineData} chartConfiguration={chartConfiguration}></Linechart>
         <RetailTable product={state[0]}></RetailTable>
       </div>
     </div>)
